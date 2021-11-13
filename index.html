@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <!--For hamburg apperar on responsive-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <nav class="navbar">
+
+                <ul class="nav-menu">
+                    <li class="nav-item"><a class="nav-link" href="">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <article>
+                <div class="content">
+                    <!-- mine image-->
+                    <div class="image">
+                        <img src="images/mine.JPG" alt="profile">
+                    </div>
+
+                    <!--image bio-->
+                    <div class="bio">
+
+                        <p style=" font-size: 3em/1.2; line-height: 27px;">
+
+                            Hi! I'm<br>
+                            <strong style=" font-size: 1em/1.2; letter-spacing: 2px;">Keshav Raj Bhusal</strong><br>
+                            <em>Geomatics Engineering Student</em><br> passionate about
+                            <br><strong>Cartography</strong>,
+                            <strong>Surveying</strong> and
+                            <strong> Remote Sensing</strong>
+                        </p>
+                    </div>
+                    <br>
+                    <!--start of what I do-->
+
+                    <h1 style="text-align:center">What I do?</h1>
+                    <section>
+
+                        <div class="service">
+
+                            <div class="serviceImg">
+                                <img src="images/whatIdo/survey.svg">
+                            </div>
+                            <h3>Surveying</h3>
+                            <p>I do Drone, DGPS and Total Station survey.</p>
+
+                        </div>
+
+
+                        <div class="service">
+
+                            <div class="serviceImg">
+                                <img src="images/whatIdo/map.svg">
+                            </div>
+                            <h3>GIS</h3>
+                            <p>I make maps using softwares like QGIS and ArcGis.</p>
+
+                        </div>
+
+
+                        <div class="service">
+
+                            <div class="serviceImg">
+                                <img src="images/whatIdo/remotesensing.svg">
+                            </div>
+                            <h3>Remote Sensing</h3>
+                            <p>I process the satellite imageries to obtain insights from it using Google Earth
+                                Engine and GIS softwares.</p>
+
+
+
+                        </div>
+
+
+                        <div class="service">
+
+                            <div class="serviceImg">
+                                <img src="images/whatIdo/webmapping.svg">
+                            </div>
+                            <h3>Web Mapping</h3>
+                            <p>I visualize spatial data with interactive web based portal.
+                            </p>
+
+                        </div>
+
+
+                        <div class="service">
+
+                            <div class="serviceImg">
+                                <img src="images/whatIdo/code.svg">
+                            </div>
+                            <h3>Web Development</h3>
+                            <p>I design and develop websites with HTML, CSS, Jquery and Django.
+                            </p>
+
+                        </div>
+
+
+                        <div class="service">
+
+                            <div class="serviceImg">
+                                <img src="images/whatIdo/blogging.svg">
+                            </div>
+                            <h3>Blogging </h3>
+                            <p>Writing and sharing my thoughts had always been my hobby since childhood.
+                            </p>
+
+                        </div>
+                    </section>
+
+                </div>
+            </article>
+        </main>
+
+        <footer>
+            <p>Get connected on</p>
+            <div class="connectImg">
+                <img src="images/connect/facebook.svg">
+                <img src="images/connect/twitter.svg">
+                <img src="images/connect/linkedin.svg">
+            </div>
+            <p style=" font-size: calc(0.7rem + 0.3vw);">@2021 Keshav Raj Bhusal</p>
+        </footer>
+
+        <!--For hamburg menuu-->
+        <script>
+            const hamburger = document.querySelector(".hamburger");
+            const navMenu = document.querySelector(".nav-menu");
+
+            hamburger.addEventListener("click", mobileMenu);
+
+            function mobileMenu() {
+                hamburger.classList.toggle("active");
+                navMenu.classList.toggle("active");
+            }
+        </script>
+</body>
+
+</html>

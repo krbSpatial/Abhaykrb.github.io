@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1">
+
+	<style>
+		
+		/* Wildcard styling */
+		* {
+			box-sizing: border-box;
+		}
+			
+		/* Padding for whole body */
+		body {
+			padding: 15px;
+			font:   Verdana , Helvetica, sans-serif;
+			font-size: 1em/1.3;
+		}
+			
+		.container {
+			max-width: 1200px;
+			margin: auto;
+		}
+			
+		/* Styling h2 tag */
+		h1 {
+			Color: green;
+			word-break: break-all;
+		}
+			
+		/* Anchor tag decoration */
+		a {
+			text-decoration: none;
+			color: #5673C8;
+		}
+			
+		a:hover {
+			color: lightblue;
+		}
+			
+		.row {
+			margin: 0px -14px;
+			padding: 8px;
+		}
+			
+		.row > .column {
+			padding: 6px;
+		}
+			
+		.column {
+			float: left;
+			width: 25%;
+			display: none;
+		}
+			
+		/* Content decoration */
+		.content {
+			background-color: white;
+			padding: 10px;
+			border: 1px solid gray;
+		}
+			
+		/* Paragraph decoration */
+		p {
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 4;
+			overflow: hidden;
+		}
+			
+		.row:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+			
+		.content {
+			background-color: white;
+			padding: 10px;
+			border: 1px solid gray;
+		}
+			
+		.show {
+			display: block;
+		}
+			
+		/* Style the filter buttons */
+		.bttn {
+			border: none;
+			padding: 8px 14px;
+			background-color: gray;
+		}
+			
+		.bttn:hover {
+			background-color: #007EE5;
+			opacity: 0.8;
+		}
+			
+		.bttn.active {
+			background-color: #007EE5;
+			color: white;
+		}
+		
+        
+
+		/* Window size 850 width set */
+		@media screen and (max-width: 850px) {
+			.column {
+				width: 50%;
+			}
+          
+		}	
+       
+        @media screen and (min-width: 40em) {
+            .worksFilter-menu{
+                display: flex;
+                justify-content: space-around;
+            }
+        }
+		/* Window size 400 width set */
+		@media screen and (max-width: 400px) {
+			.column {
+				width: 100%;
+			}
+          
+		}
+        h4, p{text-align: center;}
+	</style>
+</head>
+
+<body>
+
+	<!-- Title and tag -->
+	<div class="container">
+	
+
+		<!-- Content of the body-->
+		<h2 style="text-align: center;">My works</h2>
+
+		<!-- button foreach group -->
+		<div class="worksFilter-menu" id="filtering">
+			<button class="bttn active"
+					onclick="geeksportal('all')">
+			All
+			</button>
+			<button class="bttn"
+					onclick="geeksportal('Markup')">
+			GIS
+			</button>
+			<button class="bttn"
+					onclick="geeksportal('Style')">
+			Remote Sensing
+			</button>
+			<button class="bttn"
+					onclick="geeksportal('Scripting')">
+			Webmapping
+			</button>
+		</div>
+
+		<!-- Portfolio Gallery Grid -->
+		<div class="row">
+			<div class="column Markup">
+				<div class="content">
+					<img src=
+                    "images/my-works/StudyAreaMap.jpg"
+						alt="HTML" style="width:100%">
+                        <h4><a href="images/my-works/StudyAreaMap.jpg">Study Area Map</a></h4>
+                        <p>This a study area map of Sandhikharka Municipality</p>
+				</div>
+			</div>
+			<div class="column Styleshit">
+				<div class="content">
+					<img src=
+"images/my-works/WatershedDelineationPkr.jpg"
+						alt="CSS" style="width:100%">
+                        <h4><a href="images/my-works/WatershedDelineationPkr.jpg">WatershedDelineation map</a></h4>
+                        <p>It represents watershed of Pokhara</p>
+				</div>
+			</div>
+			<div class="column Scripting">
+				<div class="content">
+					<img src=
+                    "images/my-works/roomfinder.jpg"
+						alt="" style="width:100%">
+                        <h4><a href="https://github.com/Abhaykrb/Roomfinder">Roomfinder</a></h4>
+                        <p>This is a web based application through which user can get available rooms in ktm with their
+                            location
+                        </p>
+				</div>
+			</div>
+
+			<div class="column Markup">
+				<div class="content">
+					<img src=
+                    "images/my-works/SuicideMapLockdown.jpg"
+						alt="" style="width:100%">
+                        <h4><a href="images/my-works/SuicideMapLockdown.jpg">Suicide map</a></h4>
+                        <p>This map represents suicide cases during Nepal lockdown 2020</p>
+				</div>
+			</div>
+
+			<div class="column Markup">
+				<div class="content">
+					<img src=
+                    "images/my-works/CoronaNepal.jpg"
+						alt="" style="width:100%">
+                        <h4><a href="images/my-works/CoronaNepal.jpg">Nepal Corona map</a></h4>
+                        <p>This map represents corona situation of Nepal 2020 during its initial days.</p>
+    
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+	
+	<script>
+		geeksportal("all")
+	
+		function geeksportal(c) {
+			var x, i;
+			
+			x = document.getElementsByClassName("column");
+			
+			if (c == "all") c = "";
+			
+			for (i = 0; i < x.length; i++) {
+				w3RemoveClass(x[i], "show");
+				
+				if (x[i].className.indexOf(c) > -1)
+					w3AddClass(x[i], "show");
+			}
+		}
+	
+		function w3AddClass(element, name) {
+			var i, arr1, arr2;
+			arr1 = element.className.split(" ");
+			arr2 = name.split(" ");
+			
+			for (i = 0; i < arr2.length; i++) {
+				if (arr1.indexOf(arr2[i]) == -1) {
+					element.className += " " + arr2[i];
+				}
+			}
+		}
+	
+		function w3RemoveClass(element, name) {
+			var i, arr1, arr2;
+			arr1 = element.className.split(" ");
+			arr2 = name.split(" ");
+			for (i = 0; i < arr2.length; i++) {
+				while (arr1.indexOf(arr2[i]) > -1) {
+					arr1.splice(arr1.indexOf(arr2[i]), 1);
+				}
+			}
+			element.className = arr1.join(" ");
+		}
+	
+		// Add active class to the current
+		// button (highlight it)
+		var btnContainer = document.getElementById("filtering");
+		var btns = btnContainer.getElementsByClassName("bttn");
+		for (var i = 0; i < btns.length; i++) {
+			btns[i].addEventListener("click", function() {
+				
+				var current =
+					document.getElementsByClassName("active");
+				
+				current[0].className =
+					current[0].className.replace(" active", "");
+				
+				this.className += " active";
+			});
+		}
+	</script>
+</body>
+
+</html>

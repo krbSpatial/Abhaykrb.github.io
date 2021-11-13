@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blogs</title>
+
+    <style>
+        /*For general layout*/
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 90%;
+            margin: 2em auto;
+            font: 1em/1.3 Verdana, Helvetica, sans-serif;
+
+        }
+
+        /*start of blogs cards*/
+        .blogg {
+            background-color: rgb(250 250 250);
+        }
+
+        .bloggImg {
+            margin: 1rem auto;
+            width: 100%;
+            height: 50%;
+        }
+
+        .bloggImg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+        }
+
+        h4,
+        p,
+        h3 {
+            text-align: center;
+        }
+
+        .blogHeadline:hover {
+            color: burlywood;
+        }
+
+
+        /*blogs category*/
+        article ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .blogsCategory {
+            background-color: antiquewhite;
+        }
+
+        .blogsCategory a:link,
+        .blogsCategory a:visited {
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            color: #333;
+
+        }
+
+        .blogsCategory a:hover {
+            color: rgba(231, 237, 243, 0.7);
+        }
+
+        .category-item {
+            text-align: center;
+        }
+
+        /*responsiveness*/
+        @media screen and (min-width: 40em) {
+            main {
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+                column-gap: 5px;
+            }
+
+            .bloggImg {
+                margin: 1rem auto;
+                width: 50%;
+                height: 50%;
+            }
+
+            .bloggContent {
+                margin: 1rem auto;
+                width: 100%;
+                max-height: 50%;
+            }
+        }
+
+        @media screen and (min-width: 70em) {
+            main {
+                display: grid;
+                grid-template-columns: 3fr 1fr;
+                column-gap: 5px;
+            }
+
+
+            .blogg {
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+                grid-auto-rows: minmax(100px, auto);
+            }
+
+            section {
+                display: flex;
+                flex-direction: column;
+                row-gap: 5px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <h3>Blogs</h3>
+    <main>
+        <section>
+
+            <div class="blogg">
+                <div class="bloggImg">
+                    <img src="images/blog/guthi.jpg">
+                </div>
+                <div class="bloggContent">
+                    <h4 class="blogHeadline">Interesting facts about guthi</h4>
+                    <p>Guthi is age old practice in nepal and here are some facts about this tradition</p>
+                </div>
+            </div>
+
+            <div class="blogg">
+                <div class="bloggImg">
+                    <img src="images/blog/guthi.jpg">
+                </div>
+                <div class="bloggContent">
+                    <h4 class="blogHeadline">Interesting facts about guthi</h4>
+                    <p>Guthi is age old practice in nepal and here are some facts about this tradition</p>
+                </div>
+            </div>
+
+
+        </section>
+
+
+        <article>
+            <h3>Related links</h3>
+            <ul class="blogsCategory">
+                <li><a class="category-item" href="">GIS</a></li>
+                <li><a class="category-item" href="">Remote Sensing</a></li>
+                <li><a class="category-item" href="">Surveying</a></li>
+                <li><a class="category-item" href="">Land</a></li>
+            </ul>
+        </article>
+    </main>
+</body>
+
+</html>
