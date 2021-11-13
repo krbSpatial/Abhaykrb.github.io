@@ -216,31 +216,31 @@ footer{
   background-color: rgb(238 241 245);   
 }
 
-  .connectImg{
-      width: 7%;
-      height: 10%;
-      margin: 1rem auto;
-  }
-
-.connectImg img{
+ .connectImg{
+    width: 25%;
+    height: 25%;
+    margin: 1rem auto;
+    }
+    
+    .connectImg img{
     width: 100%;
-}
-
-footer div{
+    }
+    
+    footer div{
     display: flex;
     align-items: center;
     justify-content: space-around;
-      column-gap: 5px;      
-}
-
- @media screen and (min-width: 40em) {
+    column-gap: 5px;      
+    }
+    
+    @media screen and (min-width: 40em) {
     .connectImg{
-        width: 3%;
+    width: 10%;
     } 
- }
- 
- @media screen and (min-width: 70em) {
+    }
+    
+    @media screen and (min-width: 70em) {
     .connectImg{
-        width: 2%;
+    width: 5%;
     } 
- }
+    }
