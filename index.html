@@ -35,7 +35,7 @@
                 <div class="content">
                     <!-- mine image-->
                     <div class="image">
-                         <br><br>
+                        <br><br>
                         <img src="images/mine.jpg" alt="profile">
                     </div>
 
@@ -134,16 +134,53 @@
             </article>
         </main>
 
-        <footer>
-            <p>Get connected on</p>
-            <div class="connectImg">
-                 <a title="twitter" href="https://www.facebook.com/kesav.bhusal"  >  <img src="images/facebook.png"></a> 
-                 <a title="youtube" href="https://www.youtube.com/channel/UCRm_g-XmCkEGoUlUc-DIe3A/videos" ><img src="images/youtube.png"></a>
-                <a title="facebook" href="https://twitter.com/krbSpatial" ><img src="images/twitter.png"></a>           
-                <a title="linkedin" href="https://www.linkedin.com/in/keshav-bhusal-158a61189/" ><img src="images/linkedin.png"></a>
-               
+
+        <!--html for TESTIMONIAL-->
+        <h2 style="text-align:center">What people say?</h2>
+        <div class="slideshow-container">
+
+            <!-- Full-width slides/quotes -->
+            <div class="mySlides">
+                <q> Your energy is so contagious, and I believe it to be one of the best aspects of your teaching
+                    style. I would like to thank you for everything, sir.</q>
+                <p class="author">- Bed Prasad Pangeni, former Diploma in geomatics engineering student</p>
             </div>
-            <p style=" font-size: calc(0.7rem + 0.3vw);">@2024 Keshav Raj Bhusal</p>
+
+            <div class="mySlides">
+                <q>I had the privilege of working with Mr. Keshav when he shared his expertise in QGIS
+                    software to assist me in developing training materials for my course, "Data Analytics
+                    for Environmental Sustainability".
+                    His teaching methodology is both engaging and effective, making complex concepts
+                    accessible and understandable. His passion for Geomatics and education is evident in
+                    his dedication and enthusiasm in every session.</q>
+                <p class="author">- Surojit Dutta, Lecturer School of IIT, Temasek Polytechnic, Singapore </p>
+            </div>
+
+            <div class="mySlides">
+                <q>I have not failed. I've just found 10,000 ways that won't work.</q>
+                <p class="author">- Thomas A. Edison</p>
+            </div>
+            <!-- Dots/bullets/indicators -->
+            <div class="dot-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+
+
+        <footer>
+
+            <div class="connectImg">
+                <a title="facebook" href="https://www.facebook.com/krbSpatial/"> <img src="images/facebook.png"></a>
+                <a title="youtube" href="https://www.youtube.com/@krbSpatial"><img
+                        src="images/youtube.png"></a>
+                <a title="twitter" href="https://x.com/krbSpatial"><img src="images/twitter.png"></a>
+                <a title="linkedin" href="https://www.linkedin.com/in/keshav-bhusal-158a61189/"><img
+                        src="images/linkedin.png"></a>
+
+            </div>
+            <p style=" font-size: calc(0.7rem + 0.3vw);">@2025 Keshav Raj Bhusal</p>
         </footer>
 
         <!--For hamburg menuu-->
@@ -156,6 +193,34 @@
             function mobileMenu() {
                 hamburger.classList.toggle("active");
                 navMenu.classList.toggle("active");
+            }
+
+            // TESTIMONIAL slider
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
             }
         </script>
 </body>
