@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Keshav Raj Bhusal</title>
+    <!-- For hamburger menu -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Navbar -->
+        <div id="navbar"></div>
+
+        <main>
+            <article>
+                <div class="content">
+                    <!-- Profile image -->
+                    <div class="image">
+                        <br><br>
+                        <img src="images/mine.jpg" alt="profile">
+                    </div>
+
+                    <!-- Bio -->
+                    <div class="bio">
+                        <p style=" font-size: 3em/1.2; line-height: 27px;">
+                            Hi! I am<br>
+                            <strong style=" font-size: 1em/1.2; letter-spacing: 2px;">Keshav Raj Bhusal</strong><br>
+                            <em>GIS Consultant/Educator</em><br> passionate about
+                            <br><strong>Cartography</strong>,
+                            <strong>Surveying</strong> and
+                            <strong>Remote Sensing</strong>
+                        </p>
+                    </div>
+                    <br>
+
+                    <!-- What I do -->
+                    <h1 style="text-align:center">What I do?</h1>
+                    <section>
+                        <div class="service">
+                            <div class="serviceImg">
+                                <img src="images/whatIdo/survey.svg">
+                            </div>
+                            <h3>Surveying</h3>
+                            <p>I do Drone, DGPS and Total Station survey.</p>
+                        </div>
+
+                        <div class="service">
+                            <div class="serviceImg">
+                                <img src="images/whatIdo/map.svg">
+                            </div>
+                            <h3>GIS</h3>
+                            <p>I make maps using softwares like QGIS and ArcGIS.</p>
+                        </div>
+
+                        <div class="service">
+                            <div class="serviceImg">
+                                <img src="images/whatIdo/remotesensing.svg">
+                            </div>
+                            <h3>Remote Sensing</h3>
+                            <p>I process the satellite imageries to obtain insights from it using Google Earth Engine and GIS softwares.</p>
+                        </div>
+
+                        <div class="service">
+                            <div class="serviceImg">
+                                <img src="images/whatIdo/webmapping.svg">
+                            </div>
+                            <h3>Web Mapping</h3>
+                            <p>I visualize spatial data with interactive web based portals.</p>
+                        </div>
+
+                        <div class="service">
+                            <div class="serviceImg">
+                                <img src="images/whatIdo/code.svg">
+                            </div>
+                            <h3>Web Development</h3>
+                            <p>I design and develop websites with HTML, CSS, jQuery and Django.</p>
+                        </div>
+
+                        <div class="service">
+                            <div class="serviceImg">
+                                <img src="images/whatIdo/blogging.svg">
+                            </div>
+                            <h3>Blogging</h3>
+                            <p>Writing and sharing my thoughts has always been my hobby since childhood.</p>
+                        </div>
+                    </section>
+
+                </div>
+            </article>
+        </main>
+
+        <!-- TESTIMONIALS -->
+        <h2 style="text-align:center">What people say?</h2>
+        <div class="slideshow-container">
+            <div class="mySlides">
+                <q>Your energy is so contagious, and I believe it to be one of the best aspects of your teaching style. I would like to thank you for everything, sir.</q>
+                <p class="author">- Bed Prasad Pangeni, former Diploma in Geomatics engineering student</p>
+            </div>
+
+            <div class="mySlides">
+                <q>I had the privilege of working with Mr. Keshav when he shared his expertise in QGIS software to assist me in developing training materials for my course, "Data Analytics for Environmental Sustainability". His teaching methodology is both engaging and effective, making complex concepts accessible and understandable. His passion for Geomatics and education is evident in his dedication and enthusiasm in every session.</q>
+                <p class="author">- Surojit Dutta, Lecturer School of IIT, Temasek Polytechnic, Singapore</p>
+            </div>
+
+            <div class="mySlides">
+                <q>Your commitment to excellence and attention to detail significantly contributed to the success of the consultancy work. It is rare to encounter such dedication and expertise, and we are genuinely satisfied with the outcome of your efforts.</q>
+                <p class="author">- Nabaraj Khanal, Managing Director Concern Nepal Private Limited</p>
+            </div>
+
+            <div class="dot-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="connectImg">
+                <a title="orcid" href="https://orcid.org/0009-0000-8211-3217"><img src="images/orcid.png"></a>
+                <a title="youtube" href="https://www.youtube.com/@mapadda"><img src="images/youtube.png"></a>
+                <a title="github" href="https://github.com/krbSpatial"><img src="images/github.png"></a>
+            </div>
+            <p style="font-size: calc(0.7rem + 0.3vw);">@2025 Keshav Raj Bhusal</p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Load navbar.html into the #navbar div
+        fetch("navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+
+                // Hamburger menu
+                const hamburger = document.querySelector(".hamburger");
+                const navMenu = document.querySelector(".nav-menu");
+                hamburger.addEventListener("click", () => {
+                    hamburger.classList.toggle("active");
+                    navMenu.classList.toggle("active");
+                });
+
+                // Highlight current page
+                const currentPage = window.location.pathname.split("/").pop();
+                const navLinks = document.querySelectorAll(".nav-link");
+                navLinks.forEach(link => {
+                    const linkPage = link.getAttribute("href");
+                    if (linkPage === currentPage || (linkPage === "index.html" && currentPage === "")) {
+                        link.classList.add("active");
+                    }
+                });
+            });
+
+        // Testimonial slider
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) { showSlides(slideIndex += n); }
+        function currentSlide(n) { showSlides(slideIndex = n); }
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
+            for (i = 0; i < dots.length; i++) { dots[i].className = dots[i].className.replace(" active", ""); }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio | Keshav Raj Bhusal</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+/* Match home page layout */
+* { box-sizing: border-box; }
+body {
+    width: 90%;
+    margin: 2em auto;
+    font: 1em/1.2 Verdana, Helvetica, sans-serif;
+}
+
+/* Navbar alignment same as home page */
+#navbar {
+    width: 100%;
+    margin-bottom: 2rem;
+    position: relative;
+    top: 0;
+}
+
+/* Headings and links */
+h2 {
+    text-align: center;
+    color: #062a28;
+    margin-top: 1rem;
+}
+
+p i {
+    display: block;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 0.95em;
+}
+
+a { text-decoration: none; color: #4d4e4f; }
+a:hover { color: #1d1e1e; }
+
+/* Filter buttons */
+.worksFilter-menu {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.bttn {
+    border: none;
+    padding: 8px 14px;
+    margin: 5px;
+    border-radius: 4px;
+    background: #e0e0e0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.bttn:hover, .bttn.active { background: #6d7983; color: white; }
+
+/* Portfolio 3-column grid */
+.row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+.column { width: 100%; display: none; }
+.show { display: block; }
+
+.content {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+}
+.content:hover { transform: translateY(-5px); }
+
+.content img {
+    width: 90%;       /* smaller than 100% */
+    max-width: 300px; /* limit max width */
+    height: auto;
+    border-radius: 5px;
+    margin: 0 auto 10px auto;
+}
+
+.content h4 { margin: 10px 0 5px; font-size: 16px; }
+.content p { font-size: 14px; line-height: 1.4; }
+
+/* Responsive */
+@media screen and (max-width: 900px) { .row { grid-template-columns: repeat(2, 1fr); } }
+@media screen and (max-width: 600px) { .row { grid-template-columns: 1fr; } }
+
+</style>
+</head>
+<body>
+
+<div id="navbar"></div>
+ <p style="text-align: center;"><i>View in <a href="https://krbspatial.github.io/webmap-projects/"><b>webmap</b></a></i></p>
+        <!-- Filter Buttons -->
+        <div class="worksFilter-menu" id="filtering">
+            <button class="bttn active" onclick="filterSelection('all')">All</button>
+            <button class="bttn" onclick="filterSelection('Markup')">GIS</button>
+            <button class="bttn" onclick="filterSelection('Style')">Remote Sensing</button>
+            <button class="bttn" onclick="filterSelection('Survey')">Surveying</button>
+            <button class="bttn" onclick="filterSelection('Scripting')">Webmapping</button>
+            <button class="bttn" onclick="filterSelection('Training')">Training</button>
+        </div>
+
+        <div class="row">
+
+            <!-- =================== MARKUP / GIS =================== -->
+           <div class="column Markup show">
+				<div class="content">
+					<img src=
+                    "images/my-works/PublicMap.jpg"
+						alt="HTML" style="width:100%">
+                        <h4><a href="images/my-works/PublicMap.jpg">Map Board Installation</a></h4>
+                        <p>It's a 5/4 ft map prepared for Public Secondary School. It was very exciting project for me as I was involved in all the aspects of projects including drone survey, map design and map installation.
+							It is also the same place where I taught for Diploma in Geomatics Engineering as a Geomatics Instructor for two years.
+						</p>
+				</div>
+			</div>
+			
+				
+			<div class="column Markup show">
+				<div class="content">
+					<img src=
+                    "images/my-works/Sagrahawa-Mapping.jpeg"
+						alt="HTML" style="width:100%">
+                        <h4><a href="images/my-works/Sagrahawa-Mapping.jpeg">Sagrahawa Mapping</a></h4>
+                        <p>This project was done for Tzu Chi Nepal foundation. They wanted to establish a new settlement area in Sagrahawa area of 
+							Kapilbastu Nagarpalika, Kapilbastu district to ode Gautam Budhha and Buddhism and wanted a proper visualization of the area. So, I
+            did survey of that area with major point data collection, a bit of digitization and prepared a map for them. The map is suppose to help
+          them for proper planning, visualization and better decision making.</p>
+				</div>
+			</div>
+
+      	<div class="column Markup show">
+				<div class="content">
+					<img src=
+                    "images/my-works/BiodiversityProfile.png"
+						alt="HTML" style="width:100%">
+                        <h4><a href="images/my-works/BiodiversityProfile.png">Biodiversity Profile Preparation</a></h4>
+                        <p>It was done under Forest for Prosperity project for Rajdevi Municipality, Rautahat district, Madhesh Province. 
+                          I was involved in all the GIS analysis and report writing part of the project with collaboration with forest officer of the municipality.</p>
+				</div>
+			</div>
+
+			<div class="column Markup show">
+				<div class="content">
+					<img src=
+                    "images/my-works/KTM-5.png"
+						alt="HTML" style="width:100%">
+                        <h4><a href="images/my-works/KTM-5.png">Strategic Map</a></h4>
+                        <p>This map was made for a client for strategic planning of parliamentary constituency election in Kathmandu-5. It was 4/2 ft size flex map. 
+                          The data used in the map were extracted from Open Street Map and contains all the topographic and major landmarks. I suppose the map will helped the prospective candidate for their better overall planning in the election campaign.
+							.</p>
+				</div>
+			</div>
+
+				<div class="column Markup show">
+				<div class="content">
+					<img src=
+                    "images/my-works/ButwalTopo.jpg"
+						alt="HTML" style="width:100%">
+                        <h4><a href="images/my-works/ButwalTopo.jpg">Topographic map of Butwal</a></h4>
+                        <p>This map was made for a client in A3 size. It represents natural and builtup features of Butwal.</p>
+				</div>
+			</div>
+
+
+
+			<div class="column Markup show">
+				<div class="content">
+					<img src=
+                    "images/my-works/RainfallDistribution-Sikirakulam.png"
+						alt="HTML" style="width:100%">
+                        <h4><a href="images/my-works/RainfallDistribution-Sikirakulam.png">Rainfall Distribution</a></h4>
+                        <p>This was a research project that I did for Indian researchers that were on research related to water quality of wells in Andhra Pradesh region. It was a hectic project where extensive data
+                          cleaning was needed to convert excel sheet data to working shapefile data format. I used interpolation technique to generate rainfall distribution maps for years 2020, 2021 & 2022.
+                          I also had to prepare chlorine, potassium, Co3AsCaCO3 distribution for pre and post monsoon for all those respective years. Since the workflow was quite repeatative I had prepared a model using QGIS model builder that eased my job.
+						</p>
+				</div>
+			</div>
+
+			
+				<div class="column Markup show">
+				<div class="content">
+					<img src=
+                    "images/my-works/Choropleth.png"
+						alt="HTML" style="width:100%">
+                        <h4><a href="images/my-works/Choropleth.png">Choropleth Map</a></h4>
+                        <p>Map showing Population density of local level of Rupandehi district according to preliminary census report 2021</p>
+				</div>
+			</div>
+			
+			<div class="column Markup show">
+				<div class="content">
+					<img src=
+                    "images/my-works/REC.png"
+						alt="HTML" style="width:100%">
+                        <h4><a href="images/my-works/REC.png">Election Result 079</a></h4>
+                        <p>This map shows the constituencies no. won by political parties in Rupandehi district</p>
+				</div>
+			</div>
+			
+			
+			<div class="column Markup show">
+				<div class="content">
+					<img src=
+                    "images/my-works/PopDensity2020.jpg"
+						alt="HTML" style="width:100%">
+                        <h4><a href="images/my-works/PopDensity2020.jpg">Height map</a></h4>
+                        <p>Map showing Population density of Nepal 2020. Made with love in Aerialod.</p>
+				</div>
+			</div>
+			
+			
+			<div class="column Markup show">
+				<div class="content">
+					<img src=
+                    "images/my-works/3DButwal2020.png"
+						alt="HTML" style="width:100%">
+                        <h4><a href="http://keshavrajbhusal.com.np/maps/">3D interactive map</a></h4>
+                        <p>Map showing 3D visualization of Butwal 2020. Made in QGIS.</p>
+				</div>
+			</div>
+			
+			<div class="column Markup show">
+				<div class="content">
+					<img src=
+                    "images/my-works/touristPokhara.jpg"
+						alt="HTML" style="width:100%">
+                        <h4><a href="images/my-works/touristPokhara.jpg">Tourists Destination of Pokhara</a></h4>
+                        <p>This map show the top tourists destination of Pokhara. It was mmade in Illustrator + QGIS.</p>
+				</div>
+			</div>
+			
+		
+			
+			<div class="column Markup show">
+				<div class="content">
+					<img src=
+                    "images/my-works/SuicideMapLockdown.jpg"
+						alt="" style="width:100%">
+                        <h4><a href="images/my-works/SuicideMapLockdown.jpg">Suicide map</a></h4>
+                        <p>This map represents suicide cases during Nepal lockdown 2020. It was prepared in Arcgis + Jupyter notebook.</p>
+				</div>
+			</div>
+
+			
+	<div class="column Markup show">
+				<div class="content">
+					<img src=
+                    "images/my-works/WatershedDelineationPkr.jpg"
+						alt="" style="width:100%">
+                        <h4><a href="images/my-works/WatershedDelineationPkr.jpg">Watershed Delineation map</a></h4>
+                        <p>This map shows water delineated area of Pokhara. It was prepared in Arcgis.</p>
+				</div>
+			</div>
+
+            <!-- =================== SURVEY =================== -->
+
+            <div class="column Survey show">
+				<div class="content">
+					<img src=
+"images/my-works/Drone-PNSS.jpeg"
+						alt="CSS" style="width:100%">
+                        <h4><a href="images/my-works/Drone-PNSS.jpeg">PNSS mapping</a></h4>
+                        <p>It was a survey done for a school of Chhapiya, Rupandehi for mapping purpose.</p>
+				</div>
+			</div> 
+
+		<div class="column Survey show">
+				<div class="content">
+					<img src=
+"images/my-works/PondMapping.jpg"
+						alt="CSS" style="width:100%">
+                        <h4><a href="images/my-works/PondMapping.jpg">Pond Mapping</a></h4>
+                        <p>Worked as a surveying partner with Adhrit Engineering for Data Visualization and Analysis of Ponds in Ward  4 
+							and Ward 5 of  Siyari Rural Municipality</p>
+				</div>
+			</div> 
+
+		<div class="column Survey show">
+				<div class="content">
+					<img src=
+"images/my-works/Galkot-Layout.jpg"
+						alt="CSS" style="width:100%">
+                        <h4><a href="images/my-works/Galkot-Layout.jpg">Land Pooling Layout</a></h4>
+                        <p>It was my first ever professional survey with DGPS. It was a land pooling project in Galkot, Baglung. We had our base station setup and used Rovers for layouting the site as per design.</p>
+				</div>
+			</div> 
+			
+			<div class="column Survey show">
+				<div class="content">
+					<img src=
+"images/my-works/DPR-Omsatiya.jpeg"
+						alt="CSS" style="width:100%">
+                        <h4><a href="images/my-works/DPR-Omsatiya.jpeg">DPR Survey</a></h4>
+                        <p>It was a survey of a park done around Omsatiya region of Rupandehi district.</p>
+				</div>
+			</div>
+
+			
+			<div class="column Survey show">
+				<div class="content">
+					<img src=
+                    "images/my-works/3DBindhyabasini.png"
+						alt="HTML" style="width:100%">
+                        <h4><a href="https://youtu.be/QztdRKS8xg0">3D model of Bindhyabasini</a></h4>
+                        <p>A 3D model of Bindhyabasini Temple, Pokhara which was prepared by processing images in Pix4D software obtained from drone survey.</p>
+				</div>
+			</div>
+			
+			
+			<div class="column Survey show">
+				<div class="content">
+					<img src=
+                    "images/my-works/MorningStar.png"
+						alt="HTML" style="width:100%">
+                        <h4><a href="images/my-works/MorningStar.png">Orthophoto of Morning Star</a></h4>
+                        <p>One of the project of a school where drone survey was done to get its aerial visualization .</p>
+				</div>
+			</div>
+			
+			
+			<div class="column Survey show">
+				<div class="content">
+					<img src=
+                    "images/my-works/PNSS.png"
+						alt="HTML" style="width:100%">
+                        <h4><a href="images/my-works/PNSS.png">Map of PNSS</a></h4>
+                        <p>It was prepared in QGIS. Initially drone survey was done and image processing was done in Pix4dMapper.</p>
+				</div>
+			</div>
+			
+			<div class="column Survey show">
+				<div class="content">
+					<img src=
+                    "images/my-works/ward3krb.jpg"
+						alt="HTML" style="width:100%">
+                        <h4><a href="images/my-works/ward3krb.jpg">Emergency map</a></h4>
+                        <p>GPS survey was done to collect data of emergency sopts in ward3 of Pokhara and was later processed in QGIS.</p>
+				</div>
+			</div>
+			
+
+			<div class="column Survey show">
+				<div class="content">
+					<img src=
+                    "images/my-works/LPR.jpg"
+						alt="HTML" style="width:100%">
+                        <h4><a href="images/my-works/LPR.jpg">Lumbini Palace Resort Survey</a></h4>
+                        <p>It was a topographic survey done by my team having area of about 16 bigaha in Siyari-5, Sidhhapur, Rupandehi </p>
+				</div>
+			</div>
+
+			
+				<div class="column Survey show">
+				<div class="content">
+					<img src=
+"images/my-works/CadastralSurvey.jpeg"
+						alt="CSS" style="width:100%">
+                        <h4><a href="images/my-works/CadastralSurvey.jpeg">Cadastral Survey</a></h4>
+                        <p>It was done for Acharya Matshya Farm for calculation of pond area and better management of overall farm.</p>
+				</div>
+			</div>
+
+
+            <!-- =================== STYLES / REMOTE SENSING =================== -->
+            <div class="column Styleshit show">
+                <div class="content">
+                    <img src="images/my-works/LULC_1991.jpg" alt="LULC map of Butwal 1991">
+                    <h4><a href="images/my-works/LULC_1991.jpg">LULC map of Butwal 1991</a></h4>
+                    <p>Prepared using supervised classification technique in QGIS.</p>
+                </div>
+            </div>
+
+            <div class="column Styleshit show">
+                <div class="content">
+                    <img src="images/my-works/LST-Rupandehi.png" alt="Land Surface Temperature Rupandehi 2003">
+                    <h4><a href="https://pas074bge021.users.earthengine.app/view/lst-rupandehi-2003">Land Surface Temperature Rupandehi 2003</a></h4>
+                    <p>Prepared in Google Earth Engine using Landsat TOA product with code snippets.</p>
+                </div>
+            </div>
+
+            <div class="column Styleshit show">
+                <div class="content">
+                    <img src="images/my-works/SplitPanel.png" alt="False Color Image">
+                    <h4><a href="https://pas074bge021.users.earthengine.app/view/butwalfalsecolor1988-2021">False Color Image 1988 vs 2003</a></h4>
+                    <p>Basic Google Earth Engine project showing urban growth over 36 years using split panel interface.</p>
+                </div>
+            </div>
+
+            <!-- =================== SCRIPTING / WEB =================== -->
+            <div class="column Scripting show">
+                <div class="content">
+                    <img src="images/my-works/roomfinder.jpg" alt="Roomfinder">
+                    <h4><a href="https://github.com/Abhaykrb/Roomfinder">Roomfinder</a></h4>
+                    <p>Web-based application to locate available rooms in Kathmandu with their location.</p>
+                </div>
+            </div>
+
+            <!-- =================== TRAINING =================== -->
+            <div class="column Training show">
+                <div class="content">
+                    <img src="images/my-works/TrainingMaterial.png" alt="GIS lab material preparation">
+                    <h4><a href="images/my-works/TrainingMaterial.png">GIS lab material preparation</a></h4>
+                    <p>Assisted Mr. Surojit Dutta, Lecturer, Temasek Polytechnic, Singapore in preparing GIS lab materials.</p>
+                </div>
+            </div>
+
+        </div>
+
+
+    <script>
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("column");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                x[i].className = x[i].className.replace(" show", "");
+                if (x[i].className.indexOf(c) > -1) x[i].className += " show";
+            }
+        }
+
+        // Button active class
+        var btnContainer = document.getElementById("filtering");
+        var btns = btnContainer.getElementsByClassName("bttn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function() {
+                var current = document.getElementsByClassName("active");
+                if(current.length > 0){
+                    current[0].className = current[0].className.replace(" active", "");
+                }
+                this.className += " active";
+            });
+        }
+
+        // Initialize
+        filterSelection("all");
+        // Load navbar.html into the #navbar div
+fetch("navbar.html")
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById("navbar").innerHTML = data;
+
+        // Hamburger menu
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        });
+
+        // Highlight current page
+        const currentPage = window.location.pathname.split("/").pop();
+        const navLinks = document.querySelectorAll(".nav-link");
+        navLinks.forEach(link => {
+            const linkPage = link.getAttribute("href");
+            if (linkPage === currentPage || (linkPage === "index.html" && currentPage === "")) {
+                link.classList.add("active");
+            }
+        });
+    });
+    </script>
+</body>
+</html>
+
+
