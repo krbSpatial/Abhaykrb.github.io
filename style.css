@@ -48,7 +48,7 @@ body {
 
 /* Navbar active link */
 .nav-link.active {
-    color: #0066cc; /* change text color instead of background */
+    color: #ccad00; /* change text color instead of background */
     font-weight: bold;
 }
 
@@ -85,7 +85,7 @@ nav a:visited {
 }
 
 nav a:hover {
-    color: #0066cc;
+    color: #ccad00;
 }
 
 /* Hide navbar for mobile */
@@ -155,7 +155,7 @@ nav a:hover {
     }
 
     nav a:hover {
-        color: #0066cc;
+        color: #ccad00;
     }
 }
 
@@ -281,3 +281,4 @@ footer div {
         width: 5%;
     }
 }
+
