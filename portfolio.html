@@ -37,8 +37,8 @@ p i {
     font-size: 0.95em;
 }
 
-a { text-decoration: none; color: #4d4e4f; }
-a:hover { color: #1d1e1e; }
+a { text-decoration: none; color: #ccad00; }
+a:hover { color: #ccad00; }
 
 /* Filter buttons */
 .worksFilter-menu {
@@ -99,14 +99,14 @@ a:hover { color: #1d1e1e; }
 <body>
 
 <div id="navbar"></div>
- <p style="text-align: center;"><i>View in <a href="https://krbspatial.github.io/webmap-projects/"><b>webmap</b></a></i></p>
+ <p style="text-align: center; font-size: 12px;"><i>View in <a href="https://krbspatial.github.io/webmap-projects/"><b>webmap</b></a></i></p>
         <!-- Filter Buttons -->
         <div class="worksFilter-menu" id="filtering">
             <button class="bttn active" onclick="filterSelection('all')">All</button>
-            <button class="bttn" onclick="filterSelection('Markup')">GIS</button>
-            <button class="bttn" onclick="filterSelection('Style')">Remote Sensing</button>
+            <button class="bttn" onclick="filterSelection('Markup')">GIS/Remote Sensing</button>
+            <button class="bttn" onclick="filterSelection('Style')">Climate Change</button>
             <button class="bttn" onclick="filterSelection('Survey')">Surveying</button>
-            <button class="bttn" onclick="filterSelection('Scripting')">Webmapping</button>
+            <button class="bttn" onclick="filterSelection('Scripting')">Code</button>
             <button class="bttn" onclick="filterSelection('Training')">Training</button>
         </div>
 
@@ -124,8 +124,34 @@ a:hover { color: #1d1e1e; }
 						</p>
 				</div>
 			</div>
+
+            <div class="column Markup show">
+				<div class="content">
+					<img src=
+                    "images/my-works/MappingChhapiya.jpg"
+						alt="HTML" style="width:100%">
+                        <h4><a href="https://mapadda.com/2024/02/04/pondmapping/">Mapping Ponds of Chhapiya</a></h4>
+                        <p>I supervised this project for my Diploma in Geomatics Engineering students at PNSS.
+                        My students had collected spatial and attribute data of over 700 ponds of Ward 4 of Siyari Rural Municipality and later handed it to local government authorities.
+                        It was the first time local government had pond inventry data and later this project inspired local government to establish their own gis based pond management system. 
+                        This project was well appreciated by school and local authorities and I am very proud of the team for their hardwok and dedication.
+						</p>
+				</div>
+			</div>
 			
-				
+			<div class="column Markup show">
+				<div class="content">
+					<img src=
+                    "images/my-works/RainfallDistribution-Sikirakulam.png"
+						alt="HTML" style="width:100%">
+                        <h4><a href="images/my-works/RainfallDistribution-Sikirakulam.png">Rainfall Distribution</a></h4>
+                        <p>This was a research project that I did for Indian researchers that were on research related to water quality of wells in Andhra Pradesh region. It was a hectic project where extensive data
+                          cleaning was needed to convert excel sheet data to working shapefile data format. I used interpolation technique to generate rainfall distribution maps for years 2020, 2021 & 2022.
+                          I also had to prepare chlorine, potassium, Co3AsCaCO3 distribution for pre and post monsoon for all those respective years. Since the workflow was quite repeatative I had prepared a model using QGIS model builder that eased my job.
+						</p>
+				</div>
+			</div>	
+
 			<div class="column Markup show">
 				<div class="content">
 					<img src=
@@ -150,6 +176,18 @@ a:hover { color: #1d1e1e; }
 				</div>
 			</div>
 
+            <div class="column Markup show">
+				<div class="content">
+					<img src=
+                    "images/my-works/Wall map.jpeg"
+						alt="HTML" style="width:100%">
+                        <h4><a href="images/my-works/Wall map.jpeg">Wall Map</a></h4>
+                        <p>This was a 6/3.5 ft size map which I had designed for a prospective candidate of Morang election constituency. The indoor map was 
+                            exclusively printed in woodden board with fine printing quality. The data used in the map were taken from Open Street Map contribution and contains all the topographic and major landmarks. The map will help the candidate for the strategic planning in the election.
+							</p>
+				</div>
+			</div>
+
 			<div class="column Markup show">
 				<div class="content">
 					<img src=
@@ -171,22 +209,6 @@ a:hover { color: #1d1e1e; }
                         <p>This map was made for a client in A3 size. It represents natural and builtup features of Butwal.</p>
 				</div>
 			</div>
-
-
-
-			<div class="column Markup show">
-				<div class="content">
-					<img src=
-                    "images/my-works/RainfallDistribution-Sikirakulam.png"
-						alt="HTML" style="width:100%">
-                        <h4><a href="images/my-works/RainfallDistribution-Sikirakulam.png">Rainfall Distribution</a></h4>
-                        <p>This was a research project that I did for Indian researchers that were on research related to water quality of wells in Andhra Pradesh region. It was a hectic project where extensive data
-                          cleaning was needed to convert excel sheet data to working shapefile data format. I used interpolation technique to generate rainfall distribution maps for years 2020, 2021 & 2022.
-                          I also had to prepare chlorine, potassium, Co3AsCaCO3 distribution for pre and post monsoon for all those respective years. Since the workflow was quite repeatative I had prepared a model using QGIS model builder that eased my job.
-						</p>
-				</div>
-			</div>
-
 			
 				<div class="column Markup show">
 				<div class="content">
@@ -194,7 +216,9 @@ a:hover { color: #1d1e1e; }
                     "images/my-works/Choropleth.png"
 						alt="HTML" style="width:100%">
                         <h4><a href="images/my-works/Choropleth.png">Choropleth Map</a></h4>
-                        <p>Map showing Population density of local level of Rupandehi district according to preliminary census report 2021</p>
+                        <p>Map showing Population density of local level of Rupandehi district according to preliminary census report 2021. It was
+                            prepared  as a part of teaching material for lab excercise of my students.
+                        </p>
 				</div>
 			</div>
 			
@@ -204,7 +228,9 @@ a:hover { color: #1d1e1e; }
                     "images/my-works/REC.png"
 						alt="HTML" style="width:100%">
                         <h4><a href="images/my-works/REC.png">Election Result 079</a></h4>
-                        <p>This map shows the constituencies no. won by political parties in Rupandehi district</p>
+                        <p>This map shows the no. of parliamentay election constituencies won by political parties in Rupandehi district. I prepared it as a teaching material
+                            and lab exercise for my diploma in Geomatics Engineering Student at Public Secondary School.
+                        </p>
 				</div>
 			</div>
 			
@@ -236,7 +262,8 @@ a:hover { color: #1d1e1e; }
                     "images/my-works/touristPokhara.jpg"
 						alt="HTML" style="width:100%">
                         <h4><a href="images/my-works/touristPokhara.jpg">Tourists Destination of Pokhara</a></h4>
-                        <p>This map show the top tourists destination of Pokhara. It was mmade in Illustrator + QGIS.</p>
+                        <p>It was one of the map that I prepared during my participation in
+                            30 days map challenge in twitter back in 2021. This map show the top tourists destination of Pokhara. I made it using Illustrator and QGIS.</p>
 				</div>
 			</div>
 			
@@ -248,7 +275,9 @@ a:hover { color: #1d1e1e; }
                     "images/my-works/SuicideMapLockdown.jpg"
 						alt="" style="width:100%">
                         <h4><a href="images/my-works/SuicideMapLockdown.jpg">Suicide map</a></h4>
-                        <p>This map represents suicide cases during Nepal lockdown 2020. It was prepared in Arcgis + Jupyter notebook.</p>
+                        <p>This map represents suicide cases during Nepal lockdown 2020. It was prepared in Arcgis + Jupyter notebook.
+                            I had prepared this map for a medical student organization for raising awareness campaign about mental health risks during covid.
+                        </p>
 				</div>
 			</div>
 
@@ -383,37 +412,38 @@ a:hover { color: #1d1e1e; }
 			</div>
 
 
-            <!-- =================== STYLES / REMOTE SENSING =================== -->
-            <div class="column Styleshit show">
-                <div class="content">
-                    <img src="images/my-works/LULC_1991.jpg" alt="LULC map of Butwal 1991">
-                    <h4><a href="images/my-works/LULC_1991.jpg">LULC map of Butwal 1991</a></h4>
-                    <p>Prepared using supervised classification technique in QGIS.</p>
-                </div>
-            </div>
+            <!-- =================== STYLES / Climate Change =================== -->
+        
 
-            <div class="column Styleshit show">
+       <div class="column Styleshit show">
                 <div class="content">
-                    <img src="images/my-works/LST-Rupandehi.png" alt="Land Surface Temperature Rupandehi 2003">
-                    <h4><a href="https://pas074bge021.users.earthengine.app/view/lst-rupandehi-2003">Land Surface Temperature Rupandehi 2003</a></h4>
-                    <p>Prepared in Google Earth Engine using Landsat TOA product with code snippets.</p>
-                </div>
-            </div>
-
-            <div class="column Styleshit show">
-                <div class="content">
-                    <img src="images/my-works/SplitPanel.png" alt="False Color Image">
-                    <h4><a href="https://pas074bge021.users.earthengine.app/view/butwalfalsecolor1988-2021">False Color Image 1988 vs 2003</a></h4>
-                    <p>Basic Google Earth Engine project showing urban growth over 36 years using split panel interface.</p>
+                    <img src="images/my-works/DRR-CCA.jpeg" alt="Climate fellowship">
+                    <h4><a href="https://theyouthcan.org/climate-fellowship/fellows/keshav-raj-bhusal-IcIru">Climate fellowship</a></h4>
+                    <p>I worked as a climate fellow for five months being stationed at Rajdevi Municipality, Rautahat district under European Union funded project
+                    At Rajdevi, I was involved in various DRR and CCA activities like conducting ward wise Vulnerability and Capacity Assessment(VCA),
+                    drafting Local Disaster Climate Resilience Framework (LDCRF), OSM mapping, participatory GIS and so on. I also witnessed drought and its effect on agriculture, ecosystem and livelihood, which deepened 
+                    my interest in climate change field. Beyond all, I got to learn more about Madhesi community, their lifestyle, language, culture and many more.  
+                    I am very thankful to Youth Innovation Lab for this opportunity.</p>
                 </div>
             </div>
 
             <!-- =================== SCRIPTING / WEB =================== -->
+             <div class="column Scripting show">
+                <div class="content">
+                    <img src="images/my-works/LSTDynamics.png" alt="LSTDynamics">
+                    <h4><a href="https://github.com/krbSpatial/LST-Dynamics-Butwal">LST Dynamics</a></h4>
+                    <p> It is a simple comparision of change in Land Surface Temperature between two decades for Butwal. Since, Butwal my hometown and one of the rapidly urbanizing city of Nepal
+                        I thought of analyzing LST. I used LANDSAT TOA product data for the comparision in Google Earth Engine using split panel.
+                        .</p>
+                </div>
+            </div>
+            
             <div class="column Scripting show">
                 <div class="content">
                     <img src="images/my-works/roomfinder.jpg" alt="Roomfinder">
                     <h4><a href="https://github.com/Abhaykrb/Roomfinder">Roomfinder</a></h4>
-                    <p>Web-based application to locate available rooms in Kathmandu with their location.</p>
+                    <p>It is a web-based application to locate available rooms with their location. The concept of this project was to ease both renters and tenant.
+                     I used Django in backend and leaflet.js to built it.</p>
                 </div>
             </div>
 
@@ -483,5 +513,3 @@ fetch("navbar.html")
     </script>
 </body>
 </html>
-
-
